@@ -1,17 +1,21 @@
-import HomePage from "./components/homepage/HomePage";
-import { Route, Switch } from "react-router";
-import VideoChat from "./VideoChat";
-import "./App.css";
+import HomePage from './components/homepage/HomePage';
+import { Route, Switch } from 'react-router';
+import VideoChat from './VideoChat';
+import './App.css';
+import Login from './components/Login';
+import ConnectPage from './components/ConnectPage';
 
 function App() {
-  return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/videoChat" component={VideoChat} />
-      </Switch>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/videoChat" component={VideoChat} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/connectPage" component={ConnectPage} />
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
