@@ -1,20 +1,62 @@
 .Prog {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../assets/fond.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ProgBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .ProgBloc {
-  background-color: rgba(128, 128, 128, 0.694);
+  background-color: rgba(128, 128, 128, 0.666);
   display: flex;
   align-self: center;
   border-radius: 2px;
-}
-.ProgBloc img {
-  width: 30vh;
+  height: 30vh;
+  margin: 2vh;
 }
 
-.DescriptionPog {
+.ProgBloc img {
+  width: 100%;
+}
+
+.DescriptionProg {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  width: 40vh;
+}
+
+.BlockImage {
+  height: 20vh;
+  overflow: hidden;
+}
+
+.ShowBlock {
+  display: none;
+}
+
+.ProgBloc:hover .ShowBlock {
+  display: block;
+}
+
+.ProgBloc:hover .BlockText {
+  height: 30vh;
+}
+
+.ProgBloc:hover {
+  background-color: rgba(128, 128, 128, 0.071);
 }
