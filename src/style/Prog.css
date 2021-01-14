@@ -19,12 +19,13 @@
 }
 
 .ProgBloc {
-  background-color: rgba(128, 128, 128, 0.666);
+  background-color: rgba(172, 108, 108, 0.9);
   display: flex;
   align-self: center;
   border-radius: 2px;
-  height: 30vh;
+  height: 52vh;
   margin: 2vh;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .ProgBloc img {
@@ -32,31 +33,92 @@
 }
 
 .DescriptionProg {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
-
   width: 40vh;
+  justify-content: space-between;
 }
 
 .BlockImage {
-  height: 20vh;
+  height: 25vh;
   overflow: hidden;
 }
 
 .ShowBlock {
   display: none;
 }
+.ShowBlock p {
+  font-size: 20px;
+  margin-top: 5%;
+  margin-bottom: 15%;
+}
 
 .ProgBloc:hover .ShowBlock {
   display: block;
+
+  padding-top: 0;
+  margin-top: 3vh;
 }
 
 .ProgBloc:hover .BlockText {
   height: 30vh;
+  margin: 1%;
 }
 
 .ProgBloc:hover {
-  background-color: rgba(128, 128, 128, 0.071);
+  background-color: rgba(193, 193, 193, 0.612);
+}
+
+.ProgBloc:hover .BlockImage {
+  height: 0;
+  overflow: hidden;
+}
+
+.ProgBloc p {
+  margin-bottom: 2%;
+}
+
+.BlockText {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 50px;
+}
+.BlockText p {
+  margin: 2%;
+}
+
+.BlockText h3 {
+  margin: 2%;
+}
+
+.BlockText h4 {
+  margin: 2%;
+}
+.BlockText h5 {
+  margin-bottom: 5%;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.add-recette {
+  background-color: rgba(172, 108, 108, 1);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 20px;
+  transition: transform ease-in-out 0.5s;
+}
+.ProgHead {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 2%;
+}
+
+.ProgHead h1 {
+  width: 90%;
+  font-weight: 600;
+  border-bottom: 1px solid black;
 }

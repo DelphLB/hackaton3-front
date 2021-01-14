@@ -11,6 +11,7 @@ import AddRecettes from "./components/recettes/AddRecettes";
 import Login from "./components/Login";
 import ConnectPage from "./components/ConnectPage";
 import NavBar from "./components/navbar/NavBar";
+import PostLive from "./components/homepage/PostLive";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/nouvellerecette' component={AddRecettes} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/connectPage' component={ConnectPage} />
+        <Route exact path='/nouveauLive' component={PostLive} />
       </Switch>
     </div>
   );
