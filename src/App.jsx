@@ -1,33 +1,32 @@
-import HomePage from "./components/homepage/HomePage";
-import { Route, Switch } from "react-router";
+import HomePage from './components/homepage/HomePage';
+import { Route, Switch } from 'react-router';
 
-import VideoChat from "./video/VideoChat";
+import VideoChat from './video/VideoChat';
 
+import './App.css';
+import Recettes from './components/recettes/Recettes';
+import AddRecettes from './components/recettes/AddRecettes';
 
-import "./App.css";
-import Recettes from "./components/recettes/Recettes";
-import AddRecettes from "./components/recettes/AddRecettes";
-
-import Login from "./components/Login";
-import ConnectPage from "./components/ConnectPage";
-import NavBar from "./components/navbar/NavBar";
-import PostLive from "./components/homepage/PostLive";
+import Login from './components/Login';
+import ConnectPage from './components/ConnectPage';
+import NavBar from './components/navbar/NavBar';
+import PostLive from './components/homepage/PostLive';
 
 function App() {
-  return (
-    <div className='App'>
-      <NavBar />
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/videoChat' component={VideoChat} />
-        <Route path='/recettes' component={Recettes} />
-        <Route path='/nouvellerecette' component={AddRecettes} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path='/connectPage' component={ConnectPage} />
-        <Route exact path='/nouveauLive' component={PostLive} />
-      </Switch>
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavBar />
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route path="/videoChat/:name" component={VideoChat} />
+                <Route path="/recettes" component={Recettes} />
+                <Route path="/nouvellerecette" component={AddRecettes} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/connectPage" component={ConnectPage} />
+                <Route exact path="/nouveauLive" component={PostLive} />
+            </Switch>
+        </div>
+    );
 }
 
 export default App;

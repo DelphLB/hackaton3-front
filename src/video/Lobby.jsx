@@ -1,40 +1,41 @@
-import React from "react";
+import React from 'react';
 
 const Lobby = ({
-  username,
-  handleUsernameChange,
-  roomName,
-  handleRoomNameChange,
-  handleSubmit,
+    username,
+    handleUsernameChange,
+    roomName,
+    handleRoomNameChange,
+    handleSubmit,
 }) => {
-  return (
-    <form onSubmit={handleSubmit}>
-      <h2>Enter a room</h2>
-      <div>
-        <label htmlFor='name'>Name:</label>
-        <input
-          type='text'
-          id='field'
-          value={username}
-          onChange={handleUsernameChange}
-          required
-        />
-      </div>
+    return (
+        <form onSubmit={handleSubmit}>
+            <h2>Entrer dans la room {roomName}</h2>
+            <div>
+                <label htmlFor="name">Name:</label>
+                <input
+                    type="text"
+                    id="field"
+                    value={username}
+                    onChange={handleUsernameChange}
+                    required
+                />
+            </div>
 
-      <div>
-        <label htmlFor='room'>Room name:</label>
-        <input
-          type='text'
-          id='room'
-          value={roomName}
-          onChange={handleRoomNameChange}
-          required
-        />
-      </div>
+            {/* <div>
+                <label htmlFor="room">Room name:</label>
+                <input
+                    type="text"
+                    id="room"
+                    value={roomName}
+                    onChange={handleRoomNameChange}
+                    required
+                    disabled
+                />
+            </div> */}
 
-      <button type='submit'>Submit</button>
-    </form>
-  );
+            <button type="submit">Submit</button>
+        </form>
+    );
 };
 
 export default Lobby;
