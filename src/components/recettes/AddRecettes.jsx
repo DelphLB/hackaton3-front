@@ -3,6 +3,8 @@ import "../../style/AddRecettes.css";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { BiSmile } from 'react-icons/bi';
+
 
 
 const AddRecettes = () =>{
@@ -50,7 +52,7 @@ const AddRecettes = () =>{
                 type="text"
                 name="category"
                 id="category"
-                placeholder="catégorie"
+                placeholder="Catégorie"
                 onChange={(e) => handleChange(e)}
             />
             <input
@@ -58,7 +60,7 @@ const AddRecettes = () =>{
                 type="text"
                 name="time"
                 id="time"
-                placeholder= "temps de la recette"
+                placeholder= "Temps de la recette"
                 onChange={(e) => handleChange(e)}
             />
             <input 
@@ -66,7 +68,7 @@ const AddRecettes = () =>{
                 type="text"
                 name="image"
                 id="image"
-                placeholder= "poster la photo de votre recette"
+                placeholder= "Poster la photo de votre recette"
                 onChange={(e) => handleChange(e)}
             />
 
@@ -83,13 +85,13 @@ const AddRecettes = () =>{
                 type="text"
                 name="tools"
                 id="tools"
-                placeholder= "ustensiles nécessaires"
+                placeholder= "Ustensiles nécessaires"
                 onChange={(e) => handleChange(e)}
             />
         </div>
-        <div>
-            <Link to="/recettes" onClick={handleClick} >
-             Envoyer ! 
+        <div className="boutton-link">
+            <Link to="/recettes" onClick={handleClick} className="envoyer" >
+             Envoyer ma recette ! <BiSmile />
             </Link>
         </div>
       </div>

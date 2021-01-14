@@ -12,7 +12,7 @@ import Login from "./components/Login";
 import ConnectPage from "./components/ConnectPage";
 import NavBar from "./components/navbar/NavBar";
 import PostLive from "./components/homepage/PostLive";
-
+import Footer from "./components/footer/Footer"
 function App() {
   return (
     <div className='App'>
@@ -26,6 +26,7 @@ function App() {
         <Route exact path='/connectPage' component={ConnectPage} />
         <Route exact path='/nouveauLive' component={PostLive} />
       </Switch>
+      <Footer />
     </div>
   );
 }
