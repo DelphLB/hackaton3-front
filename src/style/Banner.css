@@ -24,7 +24,9 @@
 .cook-eat{
     /* border:1px solid red; */
     margin-bottom: 10px;
-    margin-top: 10%;
+    margin-top: 2%;
+    padding: 10px 40px;
+
 }
 
 .slogan{
@@ -35,4 +37,16 @@
     padding: 2px 15px;
     border-radius: 4px;
 
+}
+
+
+@media screen and (max-width: 845px){
+    .box-name-projet{
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 545px){
+    .box-name-projet{
+        font-size: 1.7em;
+    }
 }

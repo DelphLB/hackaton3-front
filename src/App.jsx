@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import ConnectPage from "./components/ConnectPage";
 import NavBar from "./components/navbar/NavBar";
 import PostLive from "./components/homepage/PostLive";
+import Footer from "./components/footer/Footer"
 import Recettes from "./components/recettes/Recettes";
 import AddRecettes from "./components/recettes/AddRecettes";
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/nouveauLive' component={PostLive} />
         <Route exact path='/nouvellerecette' component={AddRecettes} />
       </Switch>
+      <Footer />
     </div>
   );
 }
