@@ -37,7 +37,9 @@ const NavBar = () => {
               type='button'
               onClick={() => setActiveId("recette")}
               className={activeId === "recette" ? "items active" : "items"}>
-              RECETTES
+                  <Link className='linkPages' to='/recettes'>
+                  RECETTES
+              </Link>
             </button>
           </div>
           <div>
