@@ -2,9 +2,9 @@ import React, { useState, useCallback } from 'react';
 import Lobby from './Lobby';
 import Room from './Room';
 
-const VideoChat = () => {
+const VideoChat = ({ match }) => {
     const [username, setUsername] = useState('');
-    const [roomName, setRoomName] = useState('');
+    const [roomName, setRoomName] = useState(match.params.name);
     const [token, setToken] = useState(null);
 
     const handleUsernameChange = useCallback((event) => {
