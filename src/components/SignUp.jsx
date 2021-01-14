@@ -1,24 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router';
+import { connect } from 'react-redux';
+import {
+    userConnectedAction,
+    userDataAction,
+} from '../redux/actions/userAction';
 
-const SignUp = () => {
+const SignUp = ({ user, handleIsConnected, handleUserData }) => {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
     });
-    const [isConnected, setIsConnected] = useState(false);
-    const [user, setUser] = useState(false);
 
     const handleChange = (e) => {
         e.preventDefault();
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        axios
+        await axios
             .post(
                 'https://cookeat-wild.herokuapp.com/api/users/login',
                 formData
@@ -34,15 +37,18 @@ const SignUp = () => {
                 })
                     .then((response) => response.data)
                     .then((data) => {
-                        setIsConnected(true);
-                        setUser(data);
+                        handleIsConnected(true);
+                        handleUserData({
+                            firstname: data.firstname,
+                            lastname: data.lastname,
+                        });
                     });
             });
     };
 
     return (
         <div className="Login">
-            {isConnected && <Redirect to="/" user={user} />}
+            {user.connected && <Redirect to="/" />}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-group">
                     <label htmlFor="email">Email: </label>
@@ -70,4 +76,13 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+const mapStateToProps = (state) => ({
+    user: state.user,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    handleIsConnected: (newValue) => dispatch(userConnectedAction(newValue)),
+    handleUserData: (newValue) => dispatch(userDataAction(newValue)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
