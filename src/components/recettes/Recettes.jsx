@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../style/Recettes.css";
 import axios from "axios";
+import { Link } from "react-router-dom"
 
 const Recettes = () => {
   const [listeRecette, setListeRecette] = useState([]);
@@ -12,7 +13,7 @@ const Recettes = () => {
 
   const handleAxios = () => {
     axios
-      .get(`http://localhost:3000/api/recettes`)
+      .get(`https://cookeat-wild.herokuapp.com/api/recettes`)
       .then((response) => response.data)
       .then((data) => setListeRecette(data));
   };
@@ -25,14 +26,14 @@ const Recettes = () => {
   useEffect(() => {
     setFilterRecette(
       listeRecette.filter((recette) =>
-        recette.category.toLowerCase().includes(search.toLowerCase())
+        recette.name.toLowerCase().includes(search.toLowerCase())
       )
     );
   }, [search, listeRecette]);
 
 
-  const handleClick = () =>{
-    setInfo(!info)
+  const handleClick = (recette) =>{
+    setInfo(recette.id)
   }
   return (
     <div className='page-recettes'>
@@ -42,12 +43,15 @@ const Recettes = () => {
             className="filterbar"
             type="text"
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Rechercher par catégorie (cocktails, dessert ...)"
+            placeholder="Rechercher par nom (Ginto, Wok...)"
           />
         </div>
       </div>
       <div className="div-recettes">
-        <h1> Toutes les recettes </h1>
+        <h1 className="title-h1-recette"> Toutes les recettes </h1>
+        <Link  to={"/nouvellerecette"}
+          className="add-recette"> Partager ma recette 
+        </Link>
       </div>
       <div className="box-recettes">
         {filterRecette.map((recette) => (
@@ -60,20 +64,21 @@ const Recettes = () => {
             <p className="categorie-recette"> {recette.category} </p>
           </div> 
           <div className="info-recette">
-            <p className="more-info" onClick={handleClick}> Plus d'informations &#9660;
-              {info 
-              ? "" 
-              : <div> 
+            <div /*onClick={()=>handleClick(recette)}*/ > 
+                <div className="more-info"> Plus d'informations &#9660; </div>
+             
+               <div> 
                   <div className="time-level">
                     <p> 25 min</p>
                     <p> Facile </p>
                   </div>
                   <div className="ingredients">
-                    <p> Ingrédients : 4 personnes </p>
+                    <p className="personnes"> <strong>Ingrédients </strong>: 4 personnes </p>
+                    <p className="ingredients"> {recette.ingredients}</p>
                   </div>
                 </div>
-                } 
-            </p>
+               
+            </div>
           </div>
         </div>))}
       </div>
