@@ -19,7 +19,7 @@ const VideoChat = () => {
         async (event) => {
             event.preventDefault();
             const data = await fetch(
-                'http://localhost:3001/api/twilio/video/token',
+                'https://cookeat-wild.herokuapp.com/api/twilio/video/token',
                 {
                     method: 'POST',
                     body: JSON.stringify({
