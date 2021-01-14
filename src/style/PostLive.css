@@ -11,3 +11,41 @@
   display: flex;
   flex-direction: column;
 }
+input {
+  background-color: rgba(243, 241, 241, 1);
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4em;
+  width: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border: none;
+  border-bottom: 2px solid rgba(172, 108, 108, 0.9);
+  font-style: italic;
+}
+
+.BlocInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 80px auto;
+  width: 600px;
+}
+
+.BlocInput h1 {
+  width: 90%;
+  font-weight: 600;
+  border-bottom: 1px solid black;
+  margin-bottom: 15%;
+}
+
+.boutonPost {
+  background-color: rgba(172, 108, 108, 1);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+  transition: transform ease-in-out 0.5s;
+}
