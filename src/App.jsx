@@ -11,6 +11,7 @@ import ConnectPage from './components/ConnectPage';
 import NavBar from './components/navbar/NavBar';
 import PostLive from './components/homepage/PostLive';
 import SignUp from './components/SignUp';
+import Footer from "./components/footer/Footer"
 
 function App() {
     return (

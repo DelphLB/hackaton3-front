@@ -1,8 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import '../../style/Prog.css';
 import axios from 'axios';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
+
 // import moment from 'moment';
 
 import 'moment/locale/fr';
@@ -13,32 +15,27 @@ const Prog = () => {
     const [listRecette, setListRecette] = useState([]);
     const [nameRoom, setNameRoom] = useState('');
     let lesRecettes = [];
-
+  
     useEffect(() => {
-        axios
-            .get(`https://cookeat-wild.herokuapp.com/api/recettes`)
-            .then((response) =>
-                setListRecette(
-                    response.data.sort((a, b) => {
-                        const A = a.date;
-                        const B = b.date;
-                        if (A < B) return -1;
-                        if (A > B) return 1;
-                    })
-                )
-            );
+      axios
+        .get(`https://cookeat-wild.herokuapp.com/api/recettes`)
+        .then((response) => setListRecette(response.data));
     }, []);
 
     {
-        listRecette &&
-            listRecette.map((recette) =>
-                recette.date != null && recette.date < moment().calendar()
-                    ? lesRecettes.push(recette)
-                    : ''
-            );
+      listRecette &&
+        listRecette.map((recette) =>
+          recette.date != null && recette.date < moment().calendar()
+            ? lesRecettes.push(recette)
+            : ""
+        );
+      lesRecettes.sort((a, b) => {
+        const A = a.date;
+        const B = b.date;
+        if (A < B) return -1;
+        else if (A > B) return 1;
+      });
     }
-
-    console.log(lesRecettes);
 
     return (
         <div className="Prog">
@@ -60,7 +57,6 @@ const Prog = () => {
                                 </div>
                                 <div className="BlockText">
                                     <h2>{recette.name}</h2>
-
                                     <h3>{recette.category}</h3>
                                     <h4>
                                         Le{' '}

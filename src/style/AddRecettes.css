@@ -7,8 +7,6 @@
     justify-content: center;
     align-items: center;
     color: white;
-
-
 }
 
 .partage{
@@ -31,6 +29,7 @@
 }
 
 .post-recette input{
+    text-align: left;
     background-color: rgba(243, 241, 241,1);
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
@@ -39,7 +38,44 @@
     margin-bottom: 40px;
     padding-bottom: 10px;
     padding-left: 10px;
+    padding-top: 5px;
     border: none;
     border-bottom: 2px solid rgba(172, 108, 108,0.9);
+    border-radius: 2px;
     font-style: italic;
+}
+.boutton-link{
+    display: flex;
+    justify-content: center;
+}
+.envoyer{
+    background-color: rgba(172, 108, 108,1);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: transform ease-in-out 0.5s;
+}
+
+@media screen and (max-width: 805px){
+    .post-recette{
+        /* border: 1px solid red; */
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 80px auto; */
+        width: 300px;
+    }
+
+    .partage{
+        font-size: 2em;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+        font-family: 'Montserrat', sans-serif;
+        background-color: rgba(233, 224, 224, 0.4);
+    }
 }

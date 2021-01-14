@@ -1,15 +1,15 @@
 .Prog {
-    flex-direction: column;
-    align-items: center;
-    background-image: url('../assets/fond.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/fond.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px;
 }
 
 .ProgBlocks {
