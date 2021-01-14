@@ -9,9 +9,12 @@ const Lobby = ({
 }) => {
     return (
         <form onSubmit={handleSubmit}>
-            <h2>Entrer dans la room {roomName}</h2>
+            <h2>Vous avez choisi de participer au live : {roomName}</h2>
+
             <div>
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">
+                    Il ne vous reste qu'à entrez votre nom:
+                </label>
                 <input
                     type="text"
                     id="field"
@@ -20,6 +23,7 @@ const Lobby = ({
                     required
                 />
             </div>
+            <p>Préparez vos ustensiles, c'est parti !</p>
 
             {/* <div>
                 <label htmlFor="room">Room name:</label>

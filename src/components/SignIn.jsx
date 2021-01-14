@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router';
 
-const Login = () => {
+const SignIn = () => {
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -70,4 +70,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignIn;
