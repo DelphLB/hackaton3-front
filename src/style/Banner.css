@@ -1,0 +1,38 @@
+.container-banner{
+    height: 100vh;
+    background-image:  linear-gradient(rgba(66, 66, 66, 0.4), rgba(93, 93, 93, 0.4)),url("https://cdn.pixabay.com/photo/2017/01/14/10/57/woman-1979272_960_720.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-name-projet{
+    color: white;
+    font-size: 5em;
+    background-color: rgba(233, 224, 224, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px ;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cook-eat{
+    /* border:1px solid red; */
+    margin-bottom: 10px;
+    margin-top: 10%;
+}
+
+.slogan{
+    /* border:1px solid blue; */
+    margin-top: 0px;
+    font-size: 0.5em;
+    background-color: rgba(172, 108, 108,0.9);
+    padding: 2px 15px;
+    border-radius: 4px;
+
+}
