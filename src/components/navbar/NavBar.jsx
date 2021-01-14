@@ -16,9 +16,7 @@ const NavBar = () => {
               onClick={() => setActiveId("home")}
               className={activeId === "home" ? "items active" : "items"}>
               <Link className='linkPages' to='/'>
-                <p>
-                  <AiIcons.AiOutlineHome /> &#32; ACCUEIL
-                </p>
+                <AiIcons.AiOutlineHome /> &#32; ACCUEIL
               </Link>
             </button>
           </div>
@@ -37,8 +35,8 @@ const NavBar = () => {
               type='button'
               onClick={() => setActiveId("recette")}
               className={activeId === "recette" ? "items active" : "items"}>
-                  <Link className='linkPages' to='/recettes'>
-                  RECETTES
+              <Link className='linkPages' to='/recettes'>
+                RECETTES
               </Link>
             </button>
           </div>
