@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../style/Navbar.css";
+import "../../style/Navbar.css";
 import { Link } from "react-router-dom";
 import * as AiIcons from "react-icons/ai";
 
@@ -17,7 +17,6 @@ const NavBar = () => {
               className={activeId === "home" ? "items active" : "items"}>
               <Link className='linkPages' to='/'>
                 <p>
-                  {" "}
                   <AiIcons.AiOutlineHome /> &#32; ACCUEIL
                 </p>
               </Link>
@@ -37,11 +36,18 @@ const NavBar = () => {
             <button
               type='button'
               onClick={() => setActiveId("recette")}
-              className={activeId === "client" ? "items active" : "items"}>
+              className={activeId === "recette" ? "items active" : "items"}>
               RECETTES
-              {/* <Link className='linkPages' to='/admin/clients'>
-                
-              </Link> */}
+            </button>
+          </div>
+          <div>
+            <button
+              type='button'
+              onClick={() => setActiveId("connexion")}
+              className={activeId === "connexion" ? "items active" : "items"}>
+              <Link className='linkPages' to='/connectPage'>
+                ME CONNECTER
+              </Link>
             </button>
           </div>
         </div>
