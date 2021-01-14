@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-const ConnectPage = ({ user }) => {
-  return <div>{`Hello {user.firstname} {user.lastname}.`}</div>;
+const ConnectPage = () => {
+    return <div>{`Hello.`}</div>;
 };
 
 export default ConnectPage;
