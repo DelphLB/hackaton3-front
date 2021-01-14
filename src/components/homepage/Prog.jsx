@@ -40,14 +40,10 @@ const Prog = () => {
 
   return (
     <div className='Prog'>
-      <h1>
-        {" "}
-        Prochains live{" "}
-        <span className='TimeProg'>
-          {/* {listRecette && lesRecettes && moment(lesRecettes[0].date).fromNow()} */}
-        </span>
-      </h1>
-
+      <div className='ProgHead'>
+        <h1> Prochains Lives </h1>
+        <button className='add-recette'>Proposer un live</button>
+      </div>
       <div className='ProgBlocks'>
         {lesRecettes.map((recette) =>
           recette.date != null ? (
@@ -73,6 +69,7 @@ const Prog = () => {
                     <p>{recette.tools}</p>
                   </div>
                   <h2>Live {moment(recette.date).startOf("day").fromNow()}</h2>
+                  <h5>Proposé par {recette.chef}</h5>
                 </div>
               </div>
             </div>

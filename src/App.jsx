@@ -5,6 +5,7 @@ import "./App.css";
 import Login from "./components/Login";
 import ConnectPage from "./components/ConnectPage";
 import NavBar from "./components/navbar/NavBar";
+import PostLive from "./components/homepage/PostLive";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path='/videoChat' component={VideoChat} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/connectPage' component={ConnectPage} />
+        <Route exact path='/nouveauLive' component={PostLive} />
       </Switch>
     </div>
   );
