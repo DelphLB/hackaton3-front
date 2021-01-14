@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../../style/Prog.css";
 import axios from "axios";
 import moment from "moment";
+import { Link } from "react-router-dom";
 // import moment from 'moment';
 
 import "moment/locale/fr";
@@ -15,16 +16,7 @@ const Prog = () => {
   useEffect(() => {
     axios
       .get(`https://cookeat-wild.herokuapp.com/api/recettes`)
-      .then((response) =>
-        setListRecette(
-          response.data.sort((a, b) => {
-            const A = a.date;
-            const B = b.date;
-            if (A < B) return -1;
-            if (A > B) return 1;
-          })
-        )
-      );
+      .then((response) => setListRecette(response.data));
   }, []);
 
   {
@@ -34,6 +26,12 @@ const Prog = () => {
           ? lesRecettes.push(recette)
           : ""
       );
+    lesRecettes.sort((a, b) => {
+      const A = a.date;
+      const B = b.date;
+      if (A < B) return -1;
+      else if (A > B) return 1;
+    });
   }
 
   console.log(lesRecettes);
@@ -42,7 +40,9 @@ const Prog = () => {
     <div className='Prog'>
       <div className='ProgHead'>
         <h1> Prochains Lives </h1>
-        <button className='add-recette'>Proposer un live</button>
+        <Link to='/nouveauLive'>
+          <button className='add-recette'>Proposer un live</button>
+        </Link>
       </div>
       <div className='ProgBlocks'>
         {lesRecettes.map((recette) =>
