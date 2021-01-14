@@ -19,12 +19,15 @@ const Login = () => {
         e.preventDefault();
 
         axios
-            .post('http://localhost:3001/api/users/login', formData)
+            .post(
+                'https://cookeat-wild.herokuapp.com/api/users/login',
+                formData
+            )
             .then((response) => response.data)
             .then((data) => {
                 axios({
                     method: 'post',
-                    url: 'http://localhost:3001/api/profile',
+                    url: 'https://cookeat-wild.herokuapp.com/api/profile',
                     headers: {
                         Authorization: `Bearer ${data.token}`,
                     },
