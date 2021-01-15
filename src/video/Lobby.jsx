@@ -9,13 +9,14 @@ const Lobby = ({
     handleSubmit,
 }) => {
     return (
+        <div className='container-content-image'>
         <form  className="page-before-room" onSubmit={handleSubmit}>
             <div className="box-videochat">
                 <h2 className="choice">Vous avez choisi de participer au live : {roomName}</h2>
 
-                <div>
+                <div className="lobby-content">
                     <label htmlFor="name">
-                        Il ne vous reste qu'à entrez votre nom:
+                        Il ne vous reste plus qu'à saisir votre nom:
                     </label>
                     <input
                         type="text"
@@ -25,7 +26,7 @@ const Lobby = ({
                         required
                     />
                 </div>
-                <p>Préparez vos ustensiles, c'est parti !</p>
+                <h3>Préparez vos ustensiles !</h3>
 
                 {/* <div>
                     <label htmlFor="room">Room name:</label>
@@ -39,9 +40,10 @@ const Lobby = ({
                     />
                 </div> */}
 
-                <button type="submit">Submit</button>
+                <button type="submit">C'est parti !</button>
             </div>
         </form>
+        </div>
     );
 };
 

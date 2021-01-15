@@ -26,7 +26,7 @@ function Chat() {
     <div className="Chat">
       <header className="chat-header">
         <button className="chatbutton" onClick={() => auth.signOut()}>
-          Sign Out
+          Sortir du chat
         </button>
       </header>
       <section>{user ? <ChatRoom /> : <SignIn />}</section>
@@ -39,7 +39,7 @@ function Chat() {
     };
     return (
       <button className="chatbutton" onClick={signInWithGoogle}>
-        Sign in with Google
+        Se connecter au chat
       </button>
     );
   }
@@ -48,7 +48,7 @@ function Chat() {
     return (
       auth.currentUser && (
         <button className="chatbutton" onClick={() => auth.signOut()}>
-          Sign Out
+          Sortir du chat
         </button>
       )
     );

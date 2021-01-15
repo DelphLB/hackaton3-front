@@ -52,8 +52,8 @@ const Room = ({ roomName, token, handleLogout }) => {
 
   return (
     <div className='room'>
-      <h2 className="name-room"> Bienvenue dans la room: <p > {roomName} </p></h2>
-      <button className="logout-live" onClick={handleLogout}>Quitter le live</button>
+      <h2 className="name-room"> Bienvenue dans la room: {roomName}  <button className="logout-live" onClick={handleLogout}>Quitter le live</button></h2>
+     
 
         <div className="room-videochat">
             <div className='local-participant'>

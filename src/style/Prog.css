@@ -1,15 +1,15 @@
 .Prog {
-  flex-direction: column;
-  align-items: center;
-  background-image: url("../assets/fond.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 70px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../assets/fond.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 70px;
 }
 
 .ProgBlocks {
@@ -37,6 +37,7 @@
     align-items: center;
     width: 40vh;
     justify-content: space-between;
+    position: relative;
 }
 
 .BlockImage {
@@ -74,7 +75,13 @@
 }
 
 .ProgBloc:hover .prog-live-button {
-    display: inline-block;
+    display: block;
+    text-decoration: none;
+ 
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    width: 98%;
 }
 
 .ProgBloc:hover .BlockImage {
@@ -137,6 +144,7 @@
     color: white;
     background-color: rgba(172, 108, 108, 1);
     padding: 10px;
+    width: 100%;
 }
 
 .prog-live-button:hover{
