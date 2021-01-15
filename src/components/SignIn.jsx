@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 const SignIn = () => {
+    const history = useHistory();
     const [formData, setFormData] = useState({});
 
-    const {
-        register,
-        handleSubmit,
-        formState,
-        errors,
-        watch,
-        setError,
-    } = useForm({
+    const { register, handleSubmit, formState, errors, watch } = useForm({
         mode: 'onTouched',
     });
-    const {
-        isSubmitting,
-        isValid,
-        isSubmitted,
-        isSubmitSuccessful,
-    } = formState;
+    const { isSubmitted, isSubmitSuccessful } = formState;
 
     const onSubmit = async () => {
         await axios
             .post('https://cookeat-wild.herokuapp.com/api/users/', watch())
-            .then((response) => response);
+            .then((response) => {
+                history.push('/');
+            });
     };
 
     const validation = {

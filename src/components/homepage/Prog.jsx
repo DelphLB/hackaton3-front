@@ -48,16 +48,19 @@ const Prog = ({ user }) => {
 
     return (
         <div className="Prog">
-            {!user.connected && modal && (
-                <ToggleModal handleClickClose={handleClickClose} />
-            )}
             <div className="ProgHead">
                 <h1> Prochains Lives </h1>
                 <button className="add-recette" onClick={handleClick}>
-                    <Link to={user.connected && '/nouveauLive'}>
+                    <Link
+                        className="linkPages"
+                        to={user.connected && '/nouveauLive'}
+                    >
                         Proposer un live
                     </Link>
                 </button>
+                {!user.connected && modal && (
+                    <ToggleModal handleClickClose={handleClickClose} />
+                )}
             </div>
             <div className="ProgBlocks">
                 {lesRecettes.map((recette) =>
