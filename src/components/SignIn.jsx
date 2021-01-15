@@ -11,8 +11,6 @@ import '../style/SignIn.css';
 
 const SignIn = ({ user, handleIsConnected, handleUserData }) => {
     const history = useHistory();
-    const [formData, setFormData] = useState({});
-
     const { register, handleSubmit, formState, errors, watch } = useForm({
         mode: 'onTouched',
     });
@@ -74,79 +72,87 @@ const SignIn = ({ user, handleIsConnected, handleUserData }) => {
     };
 
     return (
-        <div className="sign-in">
-            <form onSubmit={handleSubmit(onSubmit)}>
-                {SetFormValidationMessage()}
-                <div className="form-group">
-                    <label htmlFor="firstname">Firstname: </label>
-                    <input
-                        type="text"
-                        name="firstname"
-                        id="firstname"
-                        className={
-                            errors.firstname ? 'input-error' : 'input-default'
-                        }
-                        ref={register(validation.firstname)}
-                    />
-                    {errors.firstname && (
-                        <span className="feedback-error">
-                            {errors.firstname.message}
-                        </span>
-                    )}
-                </div>
-                <div className="form-group">
-                    <label htmlFor="lastname">Lastname: </label>
-                    <input
-                        type="text"
-                        name="lastname"
-                        id="lastname"
-                        className={
-                            errors.lastname ? 'input-error' : 'input-default'
-                        }
-                        ref={register(validation.lastname)}
-                    />
-                    {errors.lastname && (
-                        <span className="feedback-error">
-                            {errors.lastname.message}
-                        </span>
-                    )}
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email: </label>
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        className={
-                            errors.email ? 'input-error' : 'input-default'
-                        }
-                        ref={register(validation.email)}
-                    />
-                    {errors.email && (
-                        <span className="feedback-error">
-                            {errors.email.message}
-                        </span>
-                    )}
-                </div>
-                <div className="form-group">
-                    <label htmlFor="password">Mot de passe : </label>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        className={
-                            errors.password ? 'input-error' : 'input-default'
-                        }
-                        ref={register(validation.password)}
-                    />
-                    {errors.password && (
-                        <span className="feedback-error">
-                            {errors.password.message}
-                        </span>
-                    )}
-                </div>
-                <button type="submit">S'inscrire</button>
-            </form>
+        <div className="container-content-image">
+            <div className="sign-in">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    {SetFormValidationMessage()}
+                    <div className="form-group">
+                        <label htmlFor="firstname">Firstname: </label>
+                        <input
+                            type="text"
+                            name="firstname"
+                            id="firstname"
+                            className={
+                                errors.firstname
+                                    ? 'input-error'
+                                    : 'input-default'
+                            }
+                            ref={register(validation.firstname)}
+                        />
+                        {errors.firstname && (
+                            <span className="feedback-error">
+                                {errors.firstname.message}
+                            </span>
+                        )}
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastname">Lastname: </label>
+                        <input
+                            type="text"
+                            name="lastname"
+                            id="lastname"
+                            className={
+                                errors.lastname
+                                    ? 'input-error'
+                                    : 'input-default'
+                            }
+                            ref={register(validation.lastname)}
+                        />
+                        {errors.lastname && (
+                            <span className="feedback-error">
+                                {errors.lastname.message}
+                            </span>
+                        )}
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email: </label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            className={
+                                errors.email ? 'input-error' : 'input-default'
+                            }
+                            ref={register(validation.email)}
+                        />
+                        {errors.email && (
+                            <span className="feedback-error">
+                                {errors.email.message}
+                            </span>
+                        )}
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Mot de passe : </label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            className={
+                                errors.password
+                                    ? 'input-error'
+                                    : 'input-default'
+                            }
+                            ref={register(validation.password)}
+                        />
+                        {errors.password && (
+                            <span className="feedback-error">
+                                {errors.password.message}
+                            </span>
+                        )}
+                    </div>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
         </div>
     );
 };

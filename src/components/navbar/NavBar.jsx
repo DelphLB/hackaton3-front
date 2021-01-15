@@ -27,16 +27,7 @@ const NavBar = ({ user }) => {
                             </Link>
                         </button>
                     </div>
-                    <div>
-                      <button
-                        type='button'
-                        onClick={() => setActiveId("video")}
-                        className={activeId === "video" ? "items active" : "items"}>
-                        <Link className='linkPages' to='/videoChat'>
-                          LIVE
-                        </Link>
-                      </button>
-                    </div>
+
                     <div>
                         <button
                             type="button"
@@ -67,8 +58,8 @@ const NavBar = ({ user }) => {
                                 <Link className="linkPages" to="/connection">
                                     ME CONNECTER
                                 </Link>
-                            </button>
-                            {' / '}
+                            </button>{' '}
+                            {' / '}{' '}
                             <button
                                 type="button"
                                 onClick={() => setActiveId('register')}
