@@ -1,16 +1,16 @@
-.footer-div{
+.footer-div {
     height: 80px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(172, 108, 108,0.8);
+    background-color: rgba(172, 108, 108, 0.8);
     color: white;
     font-weight: bold;
 }
 
-@media screen and (max-width: 505px){
-    .footer-div{
+@media screen and (max-width: 505px) {
+    .footer-div {
         display: none;
     }
 }
