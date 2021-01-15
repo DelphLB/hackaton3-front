@@ -4,7 +4,11 @@ import '../../style/ToggleModal.css';
 const ToggleModal = ({ handleClickClose }) => {
     return (
         <div onClick={handleClickClose} className="overlay">
-            <div className="contenu">contenu modale</div>
+            <div className="contenu">
+                <p>Bonjour chef cuisinier,</p>{' '}
+                <p>Vous souhaitez proposer un cours de cuisine en direct ?</p>{' '}
+                <p>Connectez-vous à Cook'eat et patagez votre talent!</p>
+            </div>
         </div>
     );
 };

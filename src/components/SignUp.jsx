@@ -6,6 +6,7 @@ import {
     userConnectedAction,
     userDataAction,
 } from '../redux/actions/userAction';
+import '../style/SignIn.css';
 
 const SignUp = ({ user, handleIsConnected, handleUserData }) => {
     const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ const SignUp = ({ user, handleIsConnected, handleUserData }) => {
     };
 
     return (
-        <div className="Login">
+        <div className="sign-up">
             {user.connected && <Redirect to="/" />}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="form-group">

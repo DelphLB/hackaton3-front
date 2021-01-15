@@ -93,12 +93,14 @@ const Prog = ({ user }) => {
                                             .fromNow()}
                                     </h2>
                                     <h5>Proposé par {recette.chef}</h5>
-                                    <Link
-                                        className="prog-live-button"
-                                        to={`/videoChat/${recette.name}`}
-                                    >
-                                        Accéder au live
-                                    </Link>
+                                    <div className="link-live">
+                                        <Link
+                                            className="prog-live-button items"
+                                            to={`/videoChat/${recette.name}`}
+                                        >
+                                            Accéder au live
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
