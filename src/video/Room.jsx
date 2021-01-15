@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Video from "twilio-video";
 import Participant from "./Participant";
+import Chat from "../components/chat/Chat"
 
 import "../style/Room.css";
 
@@ -52,19 +53,28 @@ const Room = ({ roomName, token, handleLogout }) => {
   return (
     <div className='room'>
       <h2 className="name-room"> Bienvenue dans la room: <p > {roomName} </p></h2>
-      <button onClick={handleLogout}>Log out</button>
-      <div className='local-participant'>
-        {room ? (
-          <Participant
-            key={room.localParticipant.sid}
-            participant={room.localParticipant}
-          />
-        ) : (
-          ""
-        )}
-      </div>
-      <h3>Remote Participants</h3>
-      <div className='remote-participants'>{remoteParticipants}</div>
+      <button className="logout-live" onClick={handleLogout}>Quitter le live</button>
+
+        <div className="room-videochat">
+            <div className='local-participant'>
+              {room ? (
+                <Participant
+                  key={room.localParticipant.sid}
+                  participant={room.localParticipant}
+                />
+              ) : (
+                ""
+              )}
+            </div>
+           < div className='remote-participants'>
+              <h3>Remote Participants</h3>
+              <div className="camera-remote">
+                {remoteParticipants}
+              </div>
+            </div>
+          <Chat />
+        </div>
+
     </div>
   );
 };
