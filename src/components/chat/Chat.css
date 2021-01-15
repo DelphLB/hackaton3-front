@@ -1,0 +1,153 @@
+.bodychat {
+  height: 100%;
+  margin: 2vh 0vh 2vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(238, 234, 234);
+}
+
+.Chat {
+  text-align: right;
+  max-width: 328px;
+  margin: 0;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chat-header {
+  background-color: rgb(172, 108, 108, 0.9);
+  height: 5vh;
+  min-height: 50px;
+  color: white;
+  margin: 0;
+  width: 100%;
+  max-width: 328px;
+  top: 0;
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Chat section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  background-color: rgba(172, 108, 108, 0.9);
+}
+
+.bodychat::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.bodychat::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+.bodychat::-webkit-scrollbar-thumb {
+  background: rgba(172, 108, 108, 0.9);
+}
+
+.chatform {
+  margin: 1vh;
+}
+
+form button {
+  width: 20%;
+  background-color: rgba(172, 108, 108, 0.9);
+}
+
+.chatapp {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: rgb(232, 229, 229);
+  color: rgb(46, 46, 46);
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+.chatbutton {
+  background-color: #eeeeee; /* Green */
+  border: none;
+  color: #1a1a1a;
+  /* padding: 25px 1px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding-right: 75px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sign-in {
+  color: #282c34;
+  background: white;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* ul,
+li {
+  text-align: left;
+  list-style: none;
+} */
+
+.chat-text {
+  max-width: 500px;
+  margin: 1vh;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: right;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  background: rgb(172, 108, 108, 0.9);
+  align-self: flex-end;
+}
+.received p {
+  background: #e5e5ea;
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
