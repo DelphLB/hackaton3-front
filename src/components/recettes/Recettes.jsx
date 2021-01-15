@@ -76,10 +76,10 @@ const Recettes = () => {
                <div> 
                   <div className="time-level">
                     <p> <BiTime /> {recette.time}</p>
-                    <p> <GiCook /> Facile </p>
+                    <p> <GiCook /> {recette.level} </p>
                   </div>
                   <div className="ingredients">
-                    <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: 4 personnes </p>
+                    <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: {recette.people} </p>
                     <p className="ingredients">  {recette.ingredients}</p>
 
                   </div>

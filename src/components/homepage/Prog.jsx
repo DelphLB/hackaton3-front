@@ -5,6 +5,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import ToggleModal from './ToggleModal';
+import { RiLiveLine } from 'react-icons/ri';
 
 import 'moment/locale/fr';
 
@@ -97,7 +98,7 @@ const Prog = ({ user }) => {
                                         className="prog-live-button"
                                         to={`/videoChat/${recette.name}`}
                                     >
-                                        Accéder au live
+                                        Accéder au live <RiLiveLine />
                                     </Link>
                                 </div>
                             </div>
