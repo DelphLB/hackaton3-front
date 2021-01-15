@@ -1,0 +1,74 @@
+.page-before-room{
+    height: 86.7vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+
+.box-videochat{
+    /* background-color: rgba(172, 108, 108, 0.6); */
+    padding: 20px 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-before-room .choice{
+    margin-bottom: 70px;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.page-before-room .lobby-content{
+    max-width: 325px;
+    width: 100%;
+
+}
+
+
+.page-before-room input {
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid rgba(172, 108, 108, 0.9);
+    outline: rgba(172, 108, 108, 0.9);
+    margin: 1rem 0;
+}
+
+.page-before-room button {
+    background: rgba(172, 108, 108, 0.9);
+    padding: 0.75rem 1.75rem;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    margin-top: 2.5rem;
+}
+
+.container-content-image {
+    background-image: linear-gradient(
+            rgba(43, 17, 3, 0.358),
+            rgba(0, 0, 0, 0.8)
+        ),
+        url('https://images.unsplash.com/photo-1579580205057-fb01c11dc858?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    margin: 0;
+}
+
+form label {
+    color: white;
+}
+
+
+.box-videochat h3 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color:white;
+}

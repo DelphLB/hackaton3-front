@@ -36,9 +36,9 @@ const Recettes = () => {
     );
   }, [search, listeRecette]);
 
-  const handleClick = (recette) => {
-    setInfo(recette.id);
-  };
+  // const handleClick = (recette) => {
+  //   setInfo(recette.id);
+  // };
   return (
     <div className='page-recettes'>
       <div className="mini-banner">
@@ -79,7 +79,7 @@ const Recettes = () => {
                     <p> <GiCook /> Facile </p>
                   </div>
                   <div className="ingredients">
-                    <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: 4 personnes </p>
+                    <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: {recette.people} </p>
                     <p className="ingredients">  {recette.ingredients}</p>
 
                   </div>
