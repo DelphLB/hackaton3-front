@@ -6,11 +6,9 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import ToggleModal from './ToggleModal';
 
-// import moment from 'moment';
+import "moment/locale/fr";
 
-import 'moment/locale/fr';
-
-moment.locale('fr');
+moment.locale("fr");
 
 const Prog = ({ user }) => {
     const [listRecette, setListRecette] = useState([]);
@@ -109,8 +107,13 @@ const Prog = ({ user }) => {
                     )
                 )}
             </div>
-        </div>
-    );
+          ) : (
+            ""
+          )
+        )}
+      </div>
+    </div>
+  );
 };
 
 const mapStateToProps = (state) => ({
