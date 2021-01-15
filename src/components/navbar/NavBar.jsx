@@ -3,10 +3,19 @@ import { connect } from 'react-redux';
 import '../../style/Navbar.css';
 import { Link } from 'react-router-dom';
 import * as AiIcons from 'react-icons/ai';
+import { FiLogOut } from 'react-icons/fi';
+import {
+    userConnectedAction,
+    userDataAction,
+} from '../../redux/actions/userAction';
 
-const NavBar = ({ user }) => {
+const NavBar = ({ user, handleIsConnected }) => {
     const [activeId, setActiveId] = useState('home');
-    const [isConnected, setIsConnected] = useState(false);
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        handleIsConnected(false);
+    };
 
     return (
         <div className="navBar">
@@ -77,6 +86,12 @@ const NavBar = ({ user }) => {
                     ) : (
                         <div className="linkPages">
                             Bonjour {user.data.firstname} {user.data.lastname}{' '}
+                            <button
+                                className="log-out"
+                                onClick={(e) => handleClick(e)}
+                            >
+                                <FiLogOut />
+                            </button>
                         </div>
                     )}
                 </div>
@@ -89,4 +104,8 @@ const mapStateToProps = (state) => ({
     user: state.user,
 });
 
-export default connect(mapStateToProps)(NavBar);
+const mapDispatchToProps = (dispatch) => ({
+    handleIsConnected: (newValue) => dispatch(userConnectedAction(newValue)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
