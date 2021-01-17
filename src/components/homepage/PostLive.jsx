@@ -105,6 +105,34 @@ function PostLive() {
           placeholder='heure'
           onChange={(e) => handleChange(e)}
         />
+
+        <input
+          type='text'
+          id='level'
+          name='level'
+          className='inputname'
+          placeholder='niveau (facile, moyen, difficile)'
+          onChange={(e) => handleChange(e)}
+        />
+
+        <input
+          type='text'
+          id='people'
+          name='people'
+          className='inputname'
+          placeholder='Nombre de personnes'
+          onChange={(e) => handleChange(e)}
+        />
+
+        <input
+          type='text'
+          id='preparationtime'
+          name='preparationtime'
+          className='inputname'
+          placeholder='Temps de préparation'
+          onChange={(e) => handleChange(e)}
+        />
+
       </div>
       <button
         className='boutonPost'

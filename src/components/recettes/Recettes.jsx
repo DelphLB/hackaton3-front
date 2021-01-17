@@ -72,7 +72,7 @@ const Recettes = () => {
              
                <div> 
                   <div className="time-level">
-                    <p> <BiTime /> {recette.prepationtime} min </p>
+                    <p> <BiTime /> {recette.preparationtime} min </p>
                     <p> <GiCook /> {recette.level} </p>
                   </div>
                   <div className="ingredients">
