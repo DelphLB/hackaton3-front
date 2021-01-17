@@ -47,7 +47,7 @@ const NavBar = ({ user, handleIsConnected }) => {
                 onClick={() => setActiveId("connexion")}
                 className={activeId === "connexion" ? "items active" : "items"}>
                 <Link className='linkPages' to='/connection'>
-                  CONNECTION
+                  CONNEXION
                 </Link>
               </button>{" "}
               {/* <button

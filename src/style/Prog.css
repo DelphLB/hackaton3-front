@@ -99,18 +99,21 @@
 }
 .BlockText p {
   margin: 2%;
+  font-size: 17px;
 }
 
 .BlockText h3 {
   margin: 2%;
+  font-size: 20px;
 }
 
 .BlockText h4 {
   margin: 2%;
+  font-size: 18px;
 }
 .BlockText h5 {
   margin-bottom: 5%;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
 }
 
