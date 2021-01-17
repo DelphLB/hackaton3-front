@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../style/AddRecettes.css";
 
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import { BiSmile } from "react-icons/bi";
 
 const AddRecettes = () => {

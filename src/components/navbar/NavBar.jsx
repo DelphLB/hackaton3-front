@@ -4,10 +4,7 @@ import "../../style/Navbar.css";
 import { Link } from "react-router-dom";
 import * as AiIcons from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
-import {
-  userConnectedAction,
-  userDataAction,
-} from "../../redux/actions/userAction";
+import { userConnectedAction } from "../../redux/actions/userAction";
 
 const NavBar = ({ user, handleIsConnected }) => {
   const [activeId, setActiveId] = useState("home");

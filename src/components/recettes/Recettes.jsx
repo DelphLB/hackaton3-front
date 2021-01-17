@@ -8,7 +8,6 @@ import { BiTime } from "react-icons/bi";
 import { GiCook } from "react-icons/gi";
 
 import { FaUtensils } from "react-icons/fa";
-import { GiMagnifyingGlass } from "react-icons/gi";
 
 const Recettes = () => {
   const [listeRecette, setListeRecette] = useState([]);
@@ -55,29 +54,25 @@ const Recettes = () => {
       </div>
       <div className='box-recettes'>
         {filterRecette.map((recette) => (
-
-        <div className="box-recettes-indiv">
-          <div className="box-img-recette">
-            <img className="image-recette" src={recette.image} alt="recette"/>
-          </div> 
-          <div className="name-cat">
-            <p className="name-recette"> <RiCake3Line /> {recette.name}</p>
-            <p className="categorie-recette"> {recette.category} </p>
-            <p className="cook-name"> Proposé par : {recette.chef} </p>
-          </div> 
-          <div className="info-recette">
-            <div /*onClick={()=>handleClick(recette)}*/ > 
-                <div className="more-info"> Plus d'informations &#9660; </div>
-             
-               <div> 
-                  <div className="time-level">
-                    <p> <BiTime /> {recette.preparationtime} min </p>
-                    <p> <GiCook /> {recette.level} </p>
-                  </div>
-                  <div className="ingredients">
-                    <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: {recette.people} </p>
-                    <p className="ingredients">  {recette.ingredients}</p>
-
+          <div className='box-recettes-indiv'>
+            <div className='box-img-recette'>
+              <img
+                className='image-recette'
+                src={recette.image}
+                alt='recette'
+              />
+            </div>
+            <div className='name-cat'>
+              <p className='name-recette'>
+                {" "}
+                <RiCake3Line /> {recette.name}
+              </p>
+              <p className='categorie-recette'> {recette.category} </p>
+              <p className='cook-name'> Proposé par : {recette.chef} </p>
+            </div>
+            <div className='info-recette'>
+              <div>
+                <div className='more-info'> Plus d'informations &#9660; </div>
 
                 <div>
                   <div className='time-level'>
