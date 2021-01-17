@@ -56,7 +56,23 @@ const AddRecettes = () => {
           type='text'
           name='time'
           id='time'
-          placeholder='Temps de la recette'
+          placeholder='Temps de la recette (en minutes)'
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          className='people'
+          type='text'
+          name='people'
+          id='people'
+          placeholder='Nombre de personnes'
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          className='level'
+          type='text'
+          name='level'
+          id='level'
+          placeholder='Niveau (facile, moyen, difficile)'
           onChange={(e) => handleChange(e)}
         />
         <input

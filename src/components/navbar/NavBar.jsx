@@ -65,11 +65,11 @@ const NavBar = ({ user, handleIsConnected }) => {
                                 }
                             >
                                 <Link className="linkPages" to="/connection">
-                                    ME CONNECTER
+                                    CONNECTION
                                 </Link>
                             </button>{' '}
-                            {' / '}{' '}
-                            <button
+                            {' '}{' '}
+                            {/* <button
                                 type="button"
                                 onClick={() => setActiveId('register')}
                                 className={
@@ -81,7 +81,7 @@ const NavBar = ({ user, handleIsConnected }) => {
                                 <Link className="linkPages" to="/inscription">
                                     S'INSCRIRE
                                 </Link>
-                            </button>
+                            </button> */}
                         </div>
                     ) : (
                         <div className="linkPages">

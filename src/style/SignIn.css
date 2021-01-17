@@ -54,6 +54,8 @@
     cursor: pointer;
     outline: none;
     width: auto;
+    display: flex;
+    margin-top:20px;
 }
 
 .sign-in form > .alert,

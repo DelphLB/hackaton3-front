@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 import { useForm } from 'react-hook-form';
@@ -14,6 +15,8 @@ const SignUp = ({ user, handleIsConnected, handleUserData }) => {
         mode: 'onTouched',
     });
     const { isSubmitted, isSubmitSuccessful } = formState;
+    const [activeId, setActiveId] = useState('home');
+
 
     const onSubmit = async () => {
         await axios
@@ -111,6 +114,19 @@ const SignUp = ({ user, handleIsConnected, handleUserData }) => {
                     </div>
 
                     <button type="submit">Se connecter</button>
+                    <button
+                        type="button"
+                        onClick={() => setActiveId('register')}
+                        className={
+                            activeId === 'register'
+                                ? 'items active'
+                                : 'items'
+                        }
+                    >
+                        <Link className="linkPages" to="/inscription">
+                                    Créer un compte 
+                        </Link>
+                    </button>
                 </form>
             </div>
         </div>

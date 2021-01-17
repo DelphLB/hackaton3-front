@@ -45,6 +45,13 @@
 }
 
 
-
-.camera-remote{
+@media screen and (max-width: 900px){
+    .room{
+        height: 100%;
+    }
+    .room-videochat{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -15,7 +15,6 @@ const Recettes = () => {
   const [listeRecette, setListeRecette] = useState([]);
   const [filterRecette, setFilterRecette] = useState([]);
   const [search, setSearch] = useState("");
-  const [info, setInfo] = useState(true);
 
   const handleAxios = () => {
     axios
@@ -35,10 +34,8 @@ const Recettes = () => {
       )
     );
   }, [search, listeRecette]);
-
-  // const handleClick = (recette) => {
-  //   setInfo(recette.id);
-  // };
+  
+  
   return (
     <div className='page-recettes'>
       <div className="mini-banner">
@@ -75,8 +72,8 @@ const Recettes = () => {
              
                <div> 
                   <div className="time-level">
-                    <p> <BiTime /> {recette.time}</p>
-                    <p> <GiCook /> Facile </p>
+                    <p> <BiTime /> {recette.time} min </p>
+                    <p> <GiCook /> {recette.level} </p>
                   </div>
                   <div className="ingredients">
                     <p className="personnes"> <FaUtensils /> <strong>Ingrédients </strong>: {recette.people} </p>
