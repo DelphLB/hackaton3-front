@@ -8,7 +8,7 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 
 firebase.initializeApp({
   apiKey: "AIzaSyC6D0grOhuSkF_BabvP8j2Y0UULdZKOf2M",
-  authDomain: "chat-try-fe02a.firebaseapp.com",
+  authDomain: "cook-eat.netlify.app",
   projectId: "chat-try-fe02a",
   storageBucket: "chat-try-fe02a.appspot.com",
   messagingSenderId: "198241356483",
@@ -23,9 +23,9 @@ function Chat() {
   const [user] = useAuthState(auth);
 
   return (
-    <div className='Chat'>
-      <header className='chat-header'>
-        <button className='chatbutton' onClick={() => auth.signOut()}>
+    <div className="Chat">
+      <header className="chat-header">
+        <button className="chatbutton" onClick={() => auth.signOut()}>
           Sortir du chat
         </button>
       </header>
@@ -38,7 +38,7 @@ function Chat() {
       auth.signInWithPopup(provider);
     };
     return (
-      <button className='chatbutton' onClick={signInWithGoogle}>
+      <button className="chatbutton" onClick={signInWithGoogle}>
         Se connecter au chat
       </button>
     );
@@ -47,7 +47,7 @@ function Chat() {
   function SignOut() {
     return (
       auth.currentUser && (
-        <button className='chatbutton' onClick={() => auth.signOut()}>
+        <button className="chatbutton" onClick={() => auth.signOut()}>
           Sortir du chat
         </button>
       )
@@ -76,19 +76,19 @@ function Chat() {
 
     return (
       <>
-        <main className='bodychat'>
+        <main className="bodychat">
           {messages &&
             messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
           <div ref={dummy}></div>
         </main>
-        <form className='chatform' onSubmit={sendMessage}>
+        <form className="chatform" onSubmit={sendMessage}>
           <input
-            className='chatapp'
+            className="chatapp"
             placeholder="let's chat"
             value={formValue}
             onChange={(e) => setFormValue(e.target.value)}
           />
-          <button className='chatbutton' type='submit'>
+          <button className="chatbutton" type="submit">
             Envoyer
           </button>
         </form>
@@ -102,8 +102,8 @@ function Chat() {
 
     return (
       <div className={`message ${messageClass}`}>
-        <img className='chatimg' src={photoURL} alt='chatpic' />
-        <p className='chat-text'>{text}</p>
+        <img className="chatimg" src={photoURL} alt="chatpic" />
+        <p className="chat-text">{text}</p>
       </div>
     );
   }
