@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Video from "twilio-video";
 import Participant from "./Participant";
-import Chat from "../components/chat/Chat"
+import Chat from "../components/chat/Chat";
+import { FiLogOut } from "react-icons/fi";
 
 import "../style/Room.css";
 
@@ -52,29 +53,31 @@ const Room = ({ roomName, token, handleLogout }) => {
 
   return (
     <div className='room'>
-      <h2 className="name-room"> Bienvenue dans la room: {roomName}  <button className="logout-live" onClick={handleLogout}>Quitter le live</button></h2>
-     
+      <h2 className='name-room'>
+        {" "}
+        Bienvenue dans la room: {roomName}{" "}
+        <button className='logout-live' onClick={handleLogout}>
+          <FiLogOut />
+        </button>
+      </h2>
 
-        <div className="room-videochat">
-            <div className='local-participant'>
-              {room ? (
-                <Participant
-                  key={room.localParticipant.sid}
-                  participant={room.localParticipant}
-                />
-              ) : (
-                ""
-              )}
-            </div>
-           < div className='remote-participants'>
-              <h3>Remote Participants</h3>
-              <div className="camera-remote">
-                {remoteParticipants}
-              </div>
-            </div>
-          <Chat />
+      <div className='room-videochat'>
+        <div className='local-participant'>
+          {room ? (
+            <Participant
+              key={room.localParticipant.sid}
+              participant={room.localParticipant}
+            />
+          ) : (
+            ""
+          )}
         </div>
-
+        <div className='remote-participants'>
+          <h3>Remote Participants</h3>
+          <div className='camera-remote'>{remoteParticipants}</div>
+        </div>
+        <Chat />
+      </div>
     </div>
   );
 };

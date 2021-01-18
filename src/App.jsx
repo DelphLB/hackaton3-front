@@ -2,6 +2,7 @@ import HomePage from "./components/homepage/HomePage";
 import { Route, Switch } from "react-router";
 
 import VideoChat from "./video/VideoChat";
+import ScrollToTop from './components/SrollToTop';
 
 import "./App.css";
 import Recettes from "./components/recettes/Recettes";
@@ -17,6 +18,7 @@ import Chat from "./components/chat/Chat";
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
