@@ -7,12 +7,18 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyC6D0grOhuSkF_BabvP8j2Y0UULdZKOf2M",
-  authDomain: "cook-eat.netlify.app",
-  projectId: "chat-try-fe02a",
-  storageBucket: "chat-try-fe02a.appspot.com",
-  messagingSenderId: "198241356483",
-  appId: "1:198241356483:web:619e506f8808a37896b076",
+  apiKey: "AIzaSyDu1EE_qwQA1T1VVRNeIiHnTDlB6_k--v8",
+  authDomain: "cookeat-chat.firebaseapp.com",
+  projectId: "cookeat-chat",
+  storageBucket: "cookeat-chat.appspot.com",
+  messagingSenderId: "152795736230",
+  appId: "1:152795736230:web:216cdb39fde4cdcc1f2c67",
+  // apiKey: "AIzaSyC6D0grOhuSkF_BabvP8j2Y0UULdZKOf2M",
+  // authDomain: "chat-try-fe02a.firebaseapp.com",
+  // projectId: "chat-try-fe02a",
+  // storageBucket: "chat-try-fe02a.appspot.com",
+  // messagingSenderId: "198241356483",
+  // appId: "1:198241356483:web:619e506f8808a37896b076",
   // measurementId: "G-EP2CRG50F8",
 });
 
