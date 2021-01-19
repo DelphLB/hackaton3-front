@@ -15,15 +15,16 @@ const NavBar = ({ user, handleIsConnected }) => {
   };
 
   return (
-    <div className='navBar'>
+    <div className="navBar">
       <nav>
-        <div className='list'>
+        <div className="list">
           <div>
             <button
-              type='button'
+              type="button"
               onClick={() => setActiveId("home")}
-              className={activeId === "home" ? "items active" : "items"}>
-              <Link className='linkPages' to='/'>
+              className={activeId === "home" ? "items active" : "items"}
+            >
+              <Link className="linkPages" to="/">
                 <AiIcons.AiOutlineHome /> &#32; ACCUEIL
               </Link>
             </button>
@@ -31,10 +32,11 @@ const NavBar = ({ user, handleIsConnected }) => {
 
           <div>
             <button
-              type='button'
+              type="button"
               onClick={() => setActiveId("recette")}
-              className={activeId === "recette" ? "items active" : "items"}>
-              <Link className='linkPages' to='/recettes'>
+              className={activeId === "recette" ? "items active" : "items"}
+            >
+              <Link className="linkPages" to="/recettes">
                 RECETTES
               </Link>
             </button>
@@ -43,10 +45,11 @@ const NavBar = ({ user, handleIsConnected }) => {
           {!user.connected ? (
             <div>
               <button
-                type='button'
+                type="button"
                 onClick={() => setActiveId("connexion")}
-                className={activeId === "connexion" ? "items active" : "items"}>
-                <Link className='linkPages' to='/connection'>
+                className={activeId === "connexion" ? "items active" : "items"}
+              >
+                <Link className="linkPages" to="/connection">
                   CONNEXION
                 </Link>
               </button>{" "}
@@ -65,11 +68,11 @@ const NavBar = ({ user, handleIsConnected }) => {
                             </button> */}
             </div>
           ) : (
-            <div className='linkPages'>
-              <div className='hello-name'>
+            <div className="linkPages">
+              <div className="hello-name">
                 Bonjour {user.data.firstname} {user.data.lastname}{" "}
               </div>
-              <button className='log-out' onClick={(e) => handleClick(e)}>
+              <button className="log-out" onClick={(e) => handleClick(e)}>
                 <FiLogOut />
               </button>
             </div>
