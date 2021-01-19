@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    max-width: 100%;
 }
 
 .sign-in form,
@@ -52,6 +53,9 @@
     padding: 0.75rem 1.75rem;
     cursor: pointer;
     outline: none;
+    width: auto;
+    display: flex;
+    margin-top:20px;
 }
 
 .sign-in form > .alert,

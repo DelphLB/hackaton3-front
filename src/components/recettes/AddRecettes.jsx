@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../style/AddRecettes.css";
 
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import { BiSmile } from "react-icons/bi";
 
 const AddRecettes = () => {
@@ -54,9 +54,25 @@ const AddRecettes = () => {
         <input
           className='time'
           type='text'
-          name='time'
-          id='time'
-          placeholder='Temps de la recette'
+          name='preparationtime'
+          id='preparationtime'
+          placeholder='Temps de la recette (en minutes)'
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          className='people'
+          type='text'
+          name='people'
+          id='people'
+          placeholder='Nombre de personnes'
+          onChange={(e) => handleChange(e)}
+        />
+        <input
+          className='level'
+          type='text'
+          name='level'
+          id='level'
+          placeholder='Niveau (facile, moyen, difficile)'
           onChange={(e) => handleChange(e)}
         />
         <input
